@@ -1,0 +1,20 @@
+<h1>Todos los vehiculos del consecionario</h1>
+<div class="row">
+  <% @cars.each do |car| %>
+  <div class="col-sm-6 col-md-4">
+    <div class= "thumbnail">
+      <img src="<%= car.image %>" alt="Vehiculo">
+      <div class="caption">
+        <h3><%= car.marca %></h3>
+        <h3><%= car.modelo %></h3>
+        <h3><%= car.costo %></h3>
+        <%= link_to "Mas Informacion", car, class: "btn btn-default"%>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
+
+<br>
+
+<%= link_to "Nuevo Carro", new_car_path, class:"btn btn-default" %>

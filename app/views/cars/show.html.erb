@@ -1,0 +1,13 @@
+<div class="jumbotron">
+  <center>
+    <h1><%= @car.marca %></h1>
+    <img src="<%= @car.image %>" alt="Vehiculo" class="img-responsive">
+  </center>
+  <h3>Modelo: <%= @car.modelo %></h3>
+  <h3>Año: <%= @car.ano %></h3>
+  <h3>Puertas: <%= @car.puertas %></h3>
+  <h3>Precio: <%= @car.costo %></h3>
+</div>
+
+<%= link_to 'Edit', edit_car_path(@car) %> |
+<%= link_to 'Back', cars_path %>
